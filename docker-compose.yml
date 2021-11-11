@@ -1,0 +1,29 @@
+version: '3.8'
+services:
+  challenge:
+    image: challenge
+    container_name: challenge
+    restart: always
+    ports:
+      - "4000:4000"
+    environment:
+      - MONGO_URL=mongodb://mongodb:27017/test
+    depends_on:
+      - mongodb
+    networks:
+      - backend
+  mongodb:
+    container_name: mongodb
+    volumes:
+        - /etc/localtime:/etc/localtime:ro
+        - ./.mongo-data:/data/db
+    restart: 'always'
+    ports:
+        - '27017:27017'
+    image: dannyben/alpine-mongo
+    tty: true
+    networks:
+      - backend
+networks:
+  backend:
+    driver: bridge

@@ -1,0 +1,38 @@
+export const UPLOAD_DIR = 'uploads/';
+export const HEADERS = [
+  'program identifier',
+  'data source',
+  'card number',
+  'member id',
+  'first name',
+  'last name',
+  'date of birth',
+  'address 1',
+  'address 2',
+  'city',
+  'state',
+  'zip code',
+  'telephone number',
+  'email address',
+  'consent',
+  'mobile phone',
+];
+export const CUSTOM_HEADERS = [
+  'programIdentifier',
+  'dataSource',
+  'cardNumber',
+  'memberId',
+  'firstName',
+  'lastName',
+  'dateOfBirth',
+  'address1',
+  'address2',
+  'city',
+  'state',
+  'zip',
+  'telephone',
+  'email',
+  'consent',
+  'mobile',
+];
+export const YES = 'Y';
